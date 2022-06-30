@@ -6,7 +6,7 @@ int main(void)
   float score;
   int numbers;
   printf("How many scores do you want to average: ");
-  scanf("%d", &numbers);
+  scanf("%i", &numbers);
   
   for (int i = 0; i < numbers; i++)
   {
