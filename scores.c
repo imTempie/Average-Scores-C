@@ -1,17 +1,20 @@
 #include <stdio.h>
-#include <cs50.h>
 
 int main(void)
 {
-    float total = 0;
-    int numbers = get_int("How many scores do you want to average: ");
+  float total = 0;
+  float score;
+  int numbers;
+  printf("How many scores do you want to average: ");
+  scanf("%d", &numbers);
+  
+  for (int i = 0; i < numbers; i++)
+  {
+    printf("Enter a score:  ");
+    scanf("%f", &score);
+    total += score;
+  }
 
-    for (int i = 0; i < numbers; i++)
-    {
-        float score = get_float("Enter a score:  ");
-        total += score;
-    }
-
-    float average = (total) / numbers;
-    printf("Average:  %f\n", average);
+  float average = (total) / numbers;
+  printf("Average:  %f\n", average);
 }
